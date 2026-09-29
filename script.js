@@ -59,7 +59,7 @@ function done(){
     const category = document.getElementById("category").value
     const boxs = document.getElementById("boxs")
     
-    if(title,price == ""){
+    if(title== "" && price == ""){
         console.log("کامل پر کن")
     }else{
         products.push({title : title, price : price, tedad:tedad ,category:category})
@@ -91,7 +91,7 @@ function edit(){
     backdrop.style.display = "block"
 }
 function remove(i){
-    delete products[i]
+    products.splice(i,1)
     console.log(products)
     // const box =document.getElementById("box"+products[0].title)
     // box.style.display = "none"
@@ -110,9 +110,9 @@ document.getElementById("search").addEventListener("input" , function(){
 })
 
 function fillter(){
-    const cat = document.getElementById("category").value
+    const cat = document.getElementById("category-search").value
     products.forEach((product)=>{
-        const box =document.getElementById("box"+product.category)
+        const box = document.getElementById("box"+product.title)
         if(product.category.includes(cat)){
             console.log(product.category)
             console.log("found")
