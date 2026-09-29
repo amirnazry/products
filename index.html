@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Product</title>
+</head>
+<body>
+
+<div class="backdrop" id="backdrop">
+        <div class="modal" id="modal">
+            <section>
+                <input type="text" placeholder="title" id="title">
+                <input type="text" placeholder="price" id="price">
+                <input type="button" value="x" id="close" onclick="closee()">
+            </section>
+            <section>
+                <select name="category" id="category">
+                        <option value="shoes">shoes</option>
+                        <option value="T-shirt">T-shirt</option>
+                        <option value="jeans">jeans</option>
+                    </select>
+                    <input type="number" placeholder="tedad" id="tedad">
+            </section> 
+                <input type="button" value="done" onclick="done()">
+            </div>
+</div>
+
+
+<div class="header">
+    <div class="search-box">
+        <input type="search" id="search" placeholder="search">
+    </div>
+    
+    <div class="category-box">
+        <select name="category" id="category" onchange="fillter()">
+            <option value="shoes">shoes</option>
+            <option value="T-shirt">T-shirt</option>
+            <option value="jeans">jeans</option>
+        </select>
+    </div>
+</div>
+
+    <h3 id="mojodi">Total storage:</h3>
+
+    
+    <div class="boxs" id="boxs">
+    </div>
+
+    <div class="addbox" >
+        <input type="button" value="+" id="add" onclick="show()">
+    </div>
+</body>
+</html> 
